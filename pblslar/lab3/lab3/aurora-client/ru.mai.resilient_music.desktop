@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.mai.resilient_music
+Exec=/usr/bin/ru.mai.resilient_music
+Name=Resilient music
+Name[ru]=Музыка HA
+
+[X-Application]
+Permissions=Internet
+OrganizationName=ru.mai
+ApplicationName=resilient_music
+ExecDBus=/usr/bin/ru.mai.resilient_music

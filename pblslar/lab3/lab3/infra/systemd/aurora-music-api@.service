@@ -1,0 +1,17 @@
+[Unit]
+Description=Aurora music API instance %i
+After=network.target
+
+[Service]
+Type=simple
+User=aurora-api
+WorkingDirectory=/opt/aurora-music
+EnvironmentFile=/etc/aurora-music/%i.env
+ExecStart=/usr/bin/node /opt/aurora-music/lab3/backend/server.js
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

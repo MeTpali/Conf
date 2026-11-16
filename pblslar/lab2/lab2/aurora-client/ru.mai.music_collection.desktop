@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.mai.music_collection
+Exec=/usr/bin/ru.mai.music_collection
+Name=Music collection
+Name[ru]=Музыкальная коллекция
+
+[X-Application]
+Permissions=Internet
+OrganizationName=ru.mai
+ApplicationName=music_collection
+ExecDBus=/usr/bin/ru.mai.music_collection

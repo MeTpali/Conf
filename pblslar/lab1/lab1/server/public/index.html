@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Преобразователь температуры</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Преобразователь температуры</h1>
+      <p class="subtitle">Цельсий ⇄ Фаренгейт</p>
+    </header>
+
+    <section class="card">
+      <form id="convert-form" novalidate>
+        <label for="value" class="label">Температура</label>
+        <input type="number" id="value" name="value" step="any"
+               inputmode="decimal" placeholder="Например, 36.6" required>
+
+        <span class="label">Исходная единица</span>
+        <div class="units">
+          <label class="unit">
+            <input type="radio" name="from" value="C" checked>
+            <span>°C — Цельсий</span>
+          </label>
+          <label class="unit">
+            <input type="radio" name="from" value="F">
+            <span>°F — Фаренгейт</span>
+          </label>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" id="convert-btn" class="btn btn-primary">Преобразовать</button>
+          <button type="button" id="swap-btn" class="btn btn-secondary" title="Поменять единицы">⇄</button>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <div class="history-header">
+        <h2>История (с сервера)</h2>
+        <button type="button" id="clear-btn" class="btn btn-link">Очистить</button>
+      </div>
+      <ul id="history" class="history"></ul>
+    </section>
+
+    <footer class="footer">Лабораторная работа №1 · Вариант 5</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

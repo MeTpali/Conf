@@ -1,0 +1,28 @@
+services:
+  blue1:
+    build: { context: ../.., dockerfile: lab3/infra/Dockerfile }
+    environment: { INSTANCE_ID: blue-1, APP_VERSION: blue-1.0.0, PORT: 8082, DATA_FILE: /data/albums.json }
+    volumes: [music-data:/data]
+  blue2:
+    build: { context: ../.., dockerfile: lab3/infra/Dockerfile }
+    environment: { INSTANCE_ID: blue-2, APP_VERSION: blue-1.0.0, PORT: 8082, DATA_FILE: /data/albums.json }
+    volumes: [music-data:/data]
+  green1:
+    build: { context: ../.., dockerfile: lab3/infra/Dockerfile }
+    environment: { INSTANCE_ID: green-1, APP_VERSION: green-1.1.0, PORT: 8082, DATA_FILE: /data/albums.json }
+    volumes: [music-data:/data]
+    profiles: [green]
+  green2:
+    build: { context: ../.., dockerfile: lab3/infra/Dockerfile }
+    environment: { INSTANCE_ID: green-2, APP_VERSION: green-1.1.0, PORT: 8082, DATA_FILE: /data/albums.json }
+    volumes: [music-data:/data]
+    profiles: [green]
+  nginx:
+    image: nginx:1.27-alpine
+    ports: ["8080:8080"]
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./active-upstream.conf:/etc/nginx/conf.d/active-upstream.conf:ro
+    depends_on: [blue1, blue2]
+volumes:
+  music-data:

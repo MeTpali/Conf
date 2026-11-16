@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Collection API</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Лабораторная работа 2 · вариант 9</p>
+      <h1>Музыкальная коллекция</h1>
+      <p>Тестовая HTML-страница для HTTPS REST API. OpenAPI: <a href="/openapi.json">openapi.json</a>.</p>
+    </header>
+
+    <section>
+      <h2>Подключение</h2>
+      <div class="row">
+        <label>Пользователь <input id="username" value="demo" autocomplete="username"></label>
+        <label>Пароль <input id="password" type="password" value="demo" autocomplete="current-password"></label>
+        <button id="login">Войти</button>
+        <button id="refresh" class="secondary">Обновить</button>
+      </div>
+      <p id="status" role="status">Не выполнен вход</p>
+    </section>
+
+    <section>
+      <h2>Альбом</h2>
+      <form id="albumForm">
+        <input id="recordId" type="hidden">
+        <label>Исполнитель <input id="performer" required></label>
+        <label>Альбом <input id="album" required></label>
+        <label>Год <input id="year" type="number" min="1800" max="2100" required></label>
+        <label>Жанр <input id="genre" required></label>
+        <div class="actions">
+          <button type="submit">Сохранить</button>
+          <button type="button" id="cancel" class="secondary">Очистить форму</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Записи</h2>
+      <div id="albums" class="cards"></div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

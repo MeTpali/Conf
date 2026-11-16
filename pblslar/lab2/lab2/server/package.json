@@ -1,0 +1,13 @@
+{
+  "name": "aurora-lab2-music-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HTTPS REST API for laboratory work 2",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,8 @@
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/install/strip.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/install/local.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/install.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/list_install_components.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/rebuild_cache.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/edit_cache.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/ru.mai.temperature_converter.dir
+/workspace/src/labs/mobile-web-lab/lab1/aurora-client/build/AuroraOS_5_2_1_200_5_2_1_200_aarch64-Debug/CMakeFiles/ru.mai.temperature_converter_autogen.dir

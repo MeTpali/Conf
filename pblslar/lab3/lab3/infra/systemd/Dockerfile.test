@@ -1,0 +1,15 @@
+# Проверка systemd-шаблона aurora-music-api@.service в Linux с настоящим systemd.
+# Сборка и запуск: lab3/infra/systemd/test-systemd.sh
+FROM debian:12-slim
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends systemd systemd-sysv nodejs curl ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+RUN useradd --system --home-dir /opt/aurora-music --shell /usr/sbin/nologin aurora-api \
+ && install -d -o aurora-api -g aurora-api /var/lib/aurora-music
+COPY lab2/server /opt/aurora-music/lab2/server
+COPY lab3/backend /opt/aurora-music/lab3/backend
+COPY lab3/infra/systemd/aurora-music-api@.service /etc/systemd/system/
+COPY lab3/infra/systemd/1.env lab3/infra/systemd/2.env /etc/aurora-music/
+RUN systemctl enable aurora-music-api@1 aurora-music-api@2
+STOPSIGNAL SIGRTMIN+3
+CMD ["/sbin/init"]

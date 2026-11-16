@@ -1,0 +1,4 @@
+# Если порт 8080 на ПК занят: docker compose -f docker-compose.yml -f docker-compose.port18088.yml up -d
+services:
+  nginx:
+    ports: !override ["18088:8080"]
